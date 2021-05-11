@@ -17,6 +17,16 @@ namespace JobBoard.Models
       ContactInfo = contact;
       _instances.Add(this);
     }
+
+    public static List<JobOpening> GetAll()
+    {
+      return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
   public class Contact
   {

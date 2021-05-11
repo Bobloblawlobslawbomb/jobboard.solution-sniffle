@@ -1,0 +1,17 @@
+@using JobBoard.Models;
+
+<h1>Job Board</h1>
+
+<ul>
+  @foreach (JobOpening item in Model)
+  {
+    <li>@item.Title</li>
+    <p>Description: </p>
+    <p>@item.Description</p>
+    <p>Contact Name: @item.ContactInfo.ContactInfo["name"]</p>
+    <p>Email: @item.ContactInfo.ContactInfo["email"]</p>
+    <p>Phone Number: @item.ContactInfo.ContactInfo["phoneNumber"]</p>
+    <br>
+  }
+</ul>
+<a href="/display-form">Add another posting</a>
